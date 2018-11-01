@@ -10,16 +10,10 @@
 
   <%= @category.description %>
 
-	<%= for course in  @category.courses do %>
 	
-	<p> <%= course.name %></p>
-	
-	<p><%= course.description %></p>
-	<p> ************ </p>
-
 	
 </p>
-	<% end %>
+	
 
 
 <%= link_to 'Edit', edit_category_path(@category) %> |
