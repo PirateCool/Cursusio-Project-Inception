@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_01_155907) do
+ActiveRecord::Schema.define(version: 2018_11_01_164555) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "categories", force: :cascade do |t|
-    t.string "name"
+    t.string "category_name"
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

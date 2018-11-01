@@ -2,13 +2,25 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @category.name %>
+  <%= @category.category_name %>
 </p>
 
 <p>
   <strong>Description:</strong>
+
   <%= @category.description %>
+
+	<%= for course in  @category.courses do %>
+	
+	<p> <%= course.name %></p>
+	
+	<p><%= course.description %></p>
+	<p> ************ </p>
+
+	
 </p>
+	<% end %>
+
 
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>

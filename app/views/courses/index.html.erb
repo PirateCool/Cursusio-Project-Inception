@@ -18,8 +18,8 @@
   <tbody>
     <% @courses.each do |course| %>
       <tr>
-        <td><%= course.user %></td>
-        <td><%= course.category %></td>
+        <td><%= course.user.email %></td>
+        <td><%= course.category.name %></td>
         <td><%= course.name %></td>
         <td><%= course.url %></td>
         <td><%= course.description %></td>
