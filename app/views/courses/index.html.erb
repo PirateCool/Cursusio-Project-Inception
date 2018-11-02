@@ -19,7 +19,7 @@
     <% @courses.each do |course| %>
       <tr>
         <td><%= course.user.email %></td>
-        <td><%= course.category.name %></td>
+        <td><%= course.category.category_name %></td>
         <td><%= course.name %></td>
         <td><%= course.url %></td>
         <td><%= course.description %></td>

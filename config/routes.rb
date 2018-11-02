@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
-  resources :discussions
-  resources :courses
+  get 'comments/index'
+  get 'comments/new'
+  resources :discussions do
+  	resources :comments
+  end
+  resources :courses do
+  	resources :comments
+  end
   resources :categories
   devise_for :users
   root to: 'pages#home'

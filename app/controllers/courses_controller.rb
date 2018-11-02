@@ -10,6 +10,11 @@ class CoursesController < ApplicationController
   # GET /courses/1
   # GET /courses/1.json
   def show
+      @course = Course.find(params[:id])
+      @commentable = @course
+      @comments = @commentable.comments
+      @comment = Comment.new
+      comment.user = @comment.user
   end
 
   # GET /courses/new

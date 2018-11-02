@@ -1,0 +1,14 @@
+<div id="comments">
+<% @comments.each do |comment| %>
+  <div class="comment-parent">
+  	<div class="comment-parent-box">
+    <%= comment.content %>
+    <p> by  </p>
+	</div>
+   	<div class="comment-reply-box">
+   		<%= render "comments/comments" %>
+		<%= render "comments/form" %>
+	</div>
+  </div>
+<% end %>
+</div>

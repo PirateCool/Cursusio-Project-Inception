@@ -10,6 +10,10 @@ class DiscussionsController < ApplicationController
   # GET /discussions/1
   # GET /discussions/1.json
   def show
+      @discussion = Course.find(params[:id])
+      @commentable = @discussion
+      @comments = @commentable.comments
+      @comment = Comment.new
   end
 
   # GET /discussions/new

@@ -2,7 +2,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @course.user.username.inspect  %>
+  
 </p>
 
 <p>
@@ -29,6 +29,11 @@
   <strong>Rating:</strong>
   <%= @course.rating %>
 </p>
+
+<h2>Comments</h2>
+
+<%= render "comments/comments" %>
+<%= render "comments/form" %>
 
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Back', courses_path %>
